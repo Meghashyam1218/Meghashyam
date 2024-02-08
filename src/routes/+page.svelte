@@ -7,37 +7,38 @@
 	let fill = 0;
 	let load = true;
 	let button;
+	let list = ['(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧',"▬▬ι════════ﺤ",'(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧', `✧( $ _ $ )✧.`, 'HELLO WORLD!'];
+	function loader(word = 'HELLO WORLD!') {
+		const letters = 'ABCDEFGHFIJKLMNOPQRSTUVWXY123456789';
+		console.log(word);
+		let iterations = 0;
+		let interval = null;
+		interval = setInterval(() => {
+			me.innerText = me.innerText
+				.split('')
+				.map((letter, index) => {
+					if (index < iterations) {
+						return word[index];
+					}
+					return letters[Math.floor(Math.random() * 35)];
+				})
+				.join('');
+
+			if (iterations >= word.length) {
+				clearInterval(interval);
+			}
+			iterations += 1 / 2;
+			// fill = 9.0909 * iterations;
+			// if (fill <= 100) {
+			// 	progess.style.width = `${fill}%`;
+			// }
+		}, 15);
+	}
 	onMount(() => {
-		function loader() {
-			const letters = 'ABCDEFGHFIJKLMNOPQRSTUVWXY123456789';
-			let iterations = 0;
-			let interval = null;
-			interval = setInterval(() => {
-				me.innerText = me.innerText
-					.split('')
-					.map((letter, index) => {
-						if (index < iterations) {
-							return me.dataset.value[index];
-						}
-						return letters[Math.floor(Math.random() * 35)];
-					})
-					.join('');
-
-				if (iterations >= me.dataset.value.length) {
-					clearInterval(interval);
-				}
-				iterations += 1 / 2;
-				// fill = 9.0909 * iterations;
-				// if (fill <= 100) {
-				// 	progess.style.width = `${fill}%`;
-				// }
-			}, 150);
-		}
-
 		function display() {
 			progress.style.transform = 'scaleX(0)';
 			button.style.transform = 'rotate3d(1, .5, .5, 0deg) scale(1)';
-			button.style.opacity = "100"
+			button.style.opacity = '100';
 		}
 		function updateCounter() {
 			if (fill === 100) {
@@ -50,20 +51,36 @@
 				setTimeout(display, 1200);
 			}
 			progess_bar.style.width = `${fill}%`;
-			let delay = Math.floor(Math.random() * 200) + 100;
+			let delay = Math.floor(Math.random() * 200) + 200;
 			setTimeout(updateCounter, delay);
 		}
 		updateCounter();
-		loader();
+		let index = 0;
+
+		function processListWithDelay(list, delay) {
+			if (index < list.length) {
+				setTimeout(() => {
+					loader(list[index]);
+					index++;
+					processListWithDelay(list, 1500); // Call the function recursively for the next iteration
+				}, delay);
+			}
+		}
+
+		// Call the function with your list and desired delay (in milliseconds)
+		processListWithDelay(list, 0);
 	});
 </script>
 
 <div class="loader p-8 h-[100vh] grid items-end overflow-hidden">
 	<h1
 		bind:this={me}
+		on:mouseover={() => {
+			loader('HELLO WORLD!');
+		}}
 		data-value="HELLO WORLD!"
 		id="helloworld"
-		class="text-3xl inline-block max-w-[560px] mx-auto text-nowrap sm:text-5xl xs:text-4xl md:text-7xl text-neutral-200 cursor-default"
+		class="hoverable text-3xl inline-block max-w-[560px] mx-auto text-nowrap sm:text-5xl xs:text-4xl md:text-7xl text-neutral-300 cursor-default"
 	>
 		ABCDEF GHIJK
 	</h1>
@@ -83,8 +100,8 @@
 			</h1>
 		</div>
 		<button
-			class="hellobtn bg-[#2a292a] absolute p-4 -translate-y-[40%] delay-200 opacity-0 rounded-3xl px-8 text-neutral-500 hover:text-neutral-300 transition-all ease-in-out"
-			bind:this={button}>¯\_(ツ)_/¯</button
+			class="hellobtn  bg-[#2a292a] absolute p-4 -translate-y-[40%] delay-200 opacity-0 rounded-3xl px-8 text-neutral-500 hover:text-neutral-300 transition-all ease-in-out"
+			bind:this={button}>¯\_(ツ)_/¯ Click me</button
 		>
 	</div>
 </div>

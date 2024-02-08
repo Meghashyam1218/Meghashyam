@@ -12,7 +12,7 @@ body {
 	opacity: 1;
 	background-image: radial-gradient(#2a2a2a 0.75px, #0e100f 0.75px);
 	background-size: 15px 15px;
-	cursor: none;
+	cursor: none !important;
 }
 
 *{

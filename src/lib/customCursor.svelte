@@ -17,11 +17,18 @@
 				const hoverables = document.querySelectorAll('.hoverable, a, button');
 				hoverables.forEach((hoverable) => {
 					hoverable.addEventListener('mouseenter', () => {
-						size += 20;
-						document.body.style.cursor = 'none';
+						outline.style.width="60px"
+						outline.style.height="60px"
+						hoverable.style.cursor = 'none';
+						outline.style.borderColor = "rgb(255 255 255)"
+
 					});
 					hoverable.addEventListener('mouseleave', () => {
-						size -= 20;
+						outline.style.width="44px"
+						outline.style.height="44px"
+						outline.style.borderColor = "rgb(255 255 255 / 0.1)"
+
+
 					});
 				});
 			});
@@ -34,7 +41,7 @@
 	<div bind:this={dot} class="cursor-dot w-[5px] h-[5px] bg-white" />
 	<div
 		bind:this={outline}
-		class="cursor-outline w-7 h-7 border-2 border-solid border-white opacity-50"
+		class="cursor-outline w-11 h-11 border-2 border-solid bg-white/20 border-white/10 opacity-50"
 	/>
 </div>
 
@@ -51,6 +58,6 @@
 	}
 
 	.cursor-outline {
-		transition: left 0.07s, top 0.07s;
+		transition: left 0.07s, top 0.07s, width 0.7s, height 0.7s;
 	}
 </style>
