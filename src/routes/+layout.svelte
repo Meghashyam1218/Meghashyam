@@ -1,16 +1,8 @@
 <script>
-	import { onMount } from 'svelte';
-	import './styles.css';
-	import { Cursor } from 'curseur';
-	
+	import CustomCursor from '../lib/customCursor.svelte';
+import './styles.css';
 </script>
 
 <slot />
-<div class="cursor-element">
-	<Cursor
-		color="green"
-		mixBlendMode="exclusion"
-		size="28"
-		shape= 'circle'
-	/>
-</div>
+<CustomCursor/>
+
