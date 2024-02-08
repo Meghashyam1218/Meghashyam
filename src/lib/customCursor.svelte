@@ -37,7 +37,7 @@
 	});
 </script>
 
-<div>
+<div class=" max-md:hidden ">
 	<div bind:this={dot} class="cursor-dot w-[5px] h-[5px] bg-white" />
 	<div
 		bind:this={outline}
