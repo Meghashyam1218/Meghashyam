@@ -43,6 +43,8 @@
 
 	function updateCounter() {
 		if (fill === 100) {
+			load = false;
+			setTimeout(display, 1200);
 			return;
 		}
 		fill += Math.floor(Math.random() * 10) + 1;
