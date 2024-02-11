@@ -3,6 +3,6 @@
 
 	onMount(()=>{})
 </script>
-<section class="hero">
-	<h1>Hello</h1>
+<section class="hero grid h-[100dvh] items-center justify-center bg-neutral-900">
+	<h1 class="text-5xl text-neutral-300 font-mono">Hello</h1>
 </section>

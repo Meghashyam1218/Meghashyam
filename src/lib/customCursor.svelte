@@ -53,7 +53,7 @@
 		left: O;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
-		z-index: 1;
+		z-index: 999;
 		pointer-events: none;
 	}
 
