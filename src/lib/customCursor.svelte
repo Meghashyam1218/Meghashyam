@@ -37,11 +37,11 @@
 	});
 </script>
 
-<div class=" max-md:hidden ">
+<div class=" max-lg:hidden ">
 	<div bind:this={dot} class="cursor-dot w-[5px] h-[5px] bg-white" />
-	<div
+	<div id="cursorO"
 		bind:this={outline}
-		class="cursor-outline w-11 h-11 border-2 border-solid bg-white/20 border-white/10 opacity-50"
+		class="cursor-outline w-11 h-11 border-2 border-solid bg-blend-multiply bg-blue-700/20 border-white/10 opacity-50"
 	/>
 </div>
 

@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
-const preloader = writable("true");
-export default preloader
+export const preloader = writable(true);
+export const loaded = writable(false);
+
 

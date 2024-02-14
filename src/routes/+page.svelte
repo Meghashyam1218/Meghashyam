@@ -1,9 +1,23 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
+	import Navbar from '../lib/home/navbar.svelte';
+	import Preloader from '../lib/preloader.svelte';
+	import About from '../lib/home/about.svelte';
+	import { preloader } from '../lib/store.js';
 
-	onMount(()=>{})
+	onMount(() => {});
 </script>
-<section class="hero grid h-[100dvh] items-center justify-center content-center gap-4 bg-neutral-900">
-	<h1 class="text-5xl text-center text-neutral-300 font-mono">Hello</h1>
-	<p class="text-neutral-400">＼（〇_ｏ）／ Work in progress</p>
+
+<Preloader />
+
+<section class="hero h-[100dvh] bg-zinc-950 {$preloader ? 'overflow-hidden' : ''}">
+	<div class=""><Navbar /></div>
+	<About load={!$preloader} />
+
+	<p class="text-neutral-400 text-center p-4">
+		＼（〇_ｏ）／ Nothing's Working<br />Work in progress
+	</p>
 </section>
+
+<style>
+</style>
