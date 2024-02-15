@@ -1,11 +1,11 @@
 <script>
 	export let load
-	import Button from './button.svelte';
+	import Button from './components/button.svelte';
 
-	import Shapes from './shapes.svelte';
+	import Shapes from './components/shapes.svelte';
 </script>
-<section class="bg-neutral-900">
-<div class="about max-w-[1730px] px-8 pb-8 max-lg:flex-col  flex lg:justify-evenly mx-auto">
+<section class="bg-neutral-900 h-[100vh] grid lg:mt-[-164px] mt-[-156px] items-center ">
+<div class="about max-w-[1730px] px-8 pb-8 max-lg:flex-col h-max  flex lg:justify-evenly mx-auto">
 	<div class="left lg:flex flex-col justify-around">
 		<h1 class=" text-5xl md:text-7xl 2md:text-8xl xl:text-9xl text-neutral-300 hover:text-[#c33838] font-extrabold">About Me</h1>
 		<div class="flex md:gap-2 text-neutral-400 hover:text-neutral-500 flex-col md:p-4 py-1">

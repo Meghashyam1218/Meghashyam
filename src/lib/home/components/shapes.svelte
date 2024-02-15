@@ -1,9 +1,7 @@
 <script>
     export let load
-	let size = 150;
 	let colors = '#3d3d3d';
     let colorsList=["#c33838","#c5992f","#c5992f","#36a45e"]
-    import {preloader} from "../../lib/store.js"
 	import gsap from 'gsap';
 	import { onMount } from 'svelte';
     
@@ -14,6 +12,7 @@
             clearInterval(interval)
             tl.to('#shape1', {
 			rotateY: 180,
+			
 			ease: 'power1.inOut',
 			duration: 0.5,
 			fill: '#c33838'
@@ -21,17 +20,20 @@
 		tl.to('#shape2', {
 			rotateX: 180,
 			ease: 'power1.inOut',
+			rotate:180,
 			duration: 0.5,
 			fill: '#c5992f'
 		});
 		tl.to('#shape3', {
 			rotateY: 180,
 			ease: 'power1.inOut',
+			rotate:60,
 			duration: 0.5,
 			fill: '#36a45e'
 		});
 		tl.to('#shape4', {
 			rotateX: -180,
+			rotate:-90,
 			ease: 'power1.inOut',
 			duration: 0.5,
 			fill: '#6377b5'
@@ -41,14 +43,14 @@
 	});
 </script>
 
-<div class="right  grid max-lg:grid-cols-4 grid-cols-2 max-lg:mt-8 justify-center gap-8">
+<div class="right grid max-lg:grid-cols-4 grid-cols-2 max-lg:mt-8 justify-center gap-8">
 	<svg
 		
 		viewBox="0 0 512 512"
 		fill={colors}
         id="shape1"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-180"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape   hover:hue-rotate-180"
 	>
 		<g
 			><path
@@ -63,7 +65,7 @@
         id="shape2"
 		fill={colors}
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-60"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape   hover:hue-rotate-60"
 	>
 		<g
 			><path
@@ -79,7 +81,7 @@
 		fill={colors}
         id="shape3"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:-hue-rotate-90"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape   hover:-hue-rotate-90"
 	>
 		<g
 			><path
@@ -94,7 +96,7 @@
 		fill={colors}
         id="shape4"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-60"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape   hover:hue-rotate-60"
 	>
 		<g
 			><path

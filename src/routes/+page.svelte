@@ -11,7 +11,7 @@
 <Preloader />
 
 <section class="hero h-[100dvh] bg-zinc-950 {$preloader ? 'overflow-hidden' : ''}">
-	<div class=""><Navbar /></div>
+	<Navbar />
 	<About load={!$preloader} />
 
 	<p class="text-neutral-400 text-center p-4">
