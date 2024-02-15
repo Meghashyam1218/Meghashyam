@@ -41,15 +41,14 @@
 	});
 </script>
 
-<div class="right max-lg:hidden grid grid-cols-2 justify-center gap-8">
+<div class="right  grid max-lg:grid-cols-4 grid-cols-2 max-lg:mt-8 justify-center gap-8">
 	<svg
-		width="{size}px"
-		height="{size}px"
+		
 		viewBox="0 0 512 512"
 		fill={colors}
         id="shape1"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class="hoverable shape hover:hue-rotate-180"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-180"
 	>
 		<g
 			><path
@@ -59,13 +58,12 @@
 		>
 	</svg>
 	<svg
-		width="{size}px"
-		height="{size}px"
+		
 		viewBox="0 0 512 512"
         id="shape2"
 		fill={colors}
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class="hoverable shape hover:hue-rotate-60"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-60"
 	>
 		<g
 			><path
@@ -76,13 +74,12 @@
 	</svg>
 
 	<svg
-		width="{size}px"
-		height="{size}px"
+		
 		viewBox="0 0 512 512"
 		fill={colors}
         id="shape3"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class="hoverable shape hover:-hue-rotate-90"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:-hue-rotate-90"
 	>
 		<g
 			><path
@@ -92,13 +89,12 @@
 		>
 	</svg>
 	<svg
-		width="{size}px"
-		height="{size}px"
+		
 		viewBox="0 0 512 512"
 		fill={colors}
         id="shape4"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class="hoverable shape hover:hue-rotate-60"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape hover:hue-rotate-60"
 	>
 		<g
 			><path

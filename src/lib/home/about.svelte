@@ -5,14 +5,14 @@
 	import Shapes from './shapes.svelte';
 </script>
 <section class="bg-neutral-900">
-<div class="about max-w-[1730px] px-8 pb-8  flex justify-evenly mx-auto">
-	<div class="left lg:flex flex-col">
-		<h1 class=" text-5xl md:text-9xl text-neutral-300 hover:text-[#c33838] font-extrabold">About Me</h1>
+<div class="about max-w-[1730px] px-8 pb-8 max-lg:flex-col  flex lg:justify-evenly mx-auto">
+	<div class="left lg:flex flex-col justify-around">
+		<h1 class=" text-5xl md:text-7xl 2md:text-8xl xl:text-9xl text-neutral-300 hover:text-[#c33838] font-extrabold">About Me</h1>
 		<div class="flex md:gap-2 text-neutral-400 hover:text-neutral-500 flex-col md:p-4 py-1">
-			<p class=" 2xs:text-xl md:text-3xl font-bold hover:text-[#c5992f]">
-				Hi 👋, I'm <span class=" text-xl 2xs:text-2xl md:text-4xl">G.Meghashyam</span>.
+			<p class=" 2xs:text-xl md:text-2xl xl:text-3xl font-bold hover:text-[#c5992f]">
+				Hi 👋, I'm <span class=" text-xl 2xs:text-2xl md:text-3xl xl:text-4xl">G.Meghashyam</span>.
 			</p>
-			<div class="2xs:text-xl md:text-3xl font-bold">
+			<div class="2xs:text-xl md:text-2xl xl:text-3xl font-bold">
 				<p class="my-1 md:mb-2 hover:text-[#36a45e]">A Harmonious blend of creativity and utility 🚀✨</p>
 				<p class="hover:text-[#6377b5]">~ “A creative mess is better than tidy idleness."</p>
 			</div>
