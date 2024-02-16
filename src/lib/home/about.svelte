@@ -4,7 +4,7 @@
 
 	import Shapes from './components/shapes.svelte';
 </script>
-<section class="bg-neutral-900 h-[100vh] grid lg:mt-[-164px] mt-[-156px] items-center ">
+<section class="bg-neutral-900 h-[90vh] grid lg:mt-[-80px] mt-[-50px] items-center ">
 <div class="about max-w-[1730px] px-8 pb-8 max-lg:flex-col h-max  flex lg:justify-evenly mx-auto">
 	<div class="left lg:flex flex-col justify-around">
 		<h1 class=" text-5xl md:text-7xl 2md:text-8xl xl:text-9xl text-neutral-300 hover:text-[#c33838] font-extrabold">About Me</h1>
@@ -17,20 +17,26 @@
 				<p class="hover:text-[#6377b5]">~ “A creative mess is better than tidy idleness."</p>
 			</div>
 		</div>
-		<Button />
-		<button class="flex mt-2 md:hidden items-center bg-neutral-800 p-2 px-3 rounded-full"
-			><span class="font-bold text-neutral-400">Contact Me</span>
+		<div class="flex gap-1">
+			<Button />
+			<button class="flex mt-2 md:hidden items-center bg-neutral-800 p-2 px-5 rounded-full"
+			><span class="font-bold text-neutral-300 xs:tracking-[0.25em] text-xs leading-[18px] uppercase text-centerd">Contact Me</span>
 			<svg
 				width="13px"
 				height="10px"
 				stroke-width="2"
-				class=" stroke-neutral-400"
+				class=" stroke-neutral-300"
 				viewBox="0 0 13 10"
 			>
 				<!-- <path d="M1,5 L11,5" /> -->
 				<polyline points="8 1 12 5 8 9" />
 			</svg></button
 		>
+			<button class="flex gap-1 mt-2 max-w-[210px] hover:border-neutral-800 border-2 border-neutral-900 transition-all ease-in rounded-full items-center p-4"
+				><p class="font-bold text-neutral-400 xs:tracking-[0.25em] text-xs md:text-sm leading-[18px] uppercase text-centerd">Get Resume</p><img alt="dowload" src="/download.svg"/>
+				</button
+			></div>
+		
 	</div>
 	<Shapes load={load} />
 </div>

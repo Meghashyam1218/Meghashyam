@@ -96,7 +96,7 @@
 		fill={colors}
         id="shape4"
 		style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape   hover:hue-rotate-60"
+		class=" w-[50px] h-[50px] xs:w-[75px] xs:h-[75px] md:h-[130px] md:w-[130px] lg:w-[165px]  lg:h-[165px]  hoverable shape  hue-rotate-60  hover:-hue-rotate-30"
 	>
 		<g
 			><path
