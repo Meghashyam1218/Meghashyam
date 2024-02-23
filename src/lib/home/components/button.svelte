@@ -1,6 +1,6 @@
 <!-- Inspiration: https://dribbble.com/shots/4397812-Click-Me -->
 
-<a href="/#" class="cta max-md:hidden inline-flex items-center mt-2">
+<a href="mailto:gurrammeghashyam@gmail.com" class="cta max-md:hidden inline-flex items-center mt-2">
 	<span class="text-sm text-neutral-400">Contact Me</span>
 	<svg width="13px" height="10px" class=" stroke-neutral-400" viewBox="0 0 13 10">
 		<path d="M1,5 L11,5" />
