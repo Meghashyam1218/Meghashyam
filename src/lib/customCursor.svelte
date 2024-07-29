@@ -17,18 +17,21 @@
 				const hoverables = document.querySelectorAll('.hoverable, a, button');
 				hoverables.forEach((hoverable) => {
 					hoverable.addEventListener('mouseenter', () => {
-						outline.style.width="60px"
-						outline.style.height="60px"
+						outline.style.width = '60px';
+						outline.style.height = '60px';
+						outline.style.opacity = '0.2';
 						hoverable.style.cursor = 'none';
-						outline.style.borderColor = "rgb(255 255 255)"
-
+						outline.style.borderColor = getComputedStyle(document.body).getPropertyValue(
+							'--accent-800'
+						);
 					});
 					hoverable.addEventListener('mouseleave', () => {
-						outline.style.width="44px"
-						outline.style.height="44px"
-						outline.style.borderColor = "rgb(255 255 255 / 0.1)"
-
-
+						outline.style.width = '44px';
+						outline.style.height = '44px';
+						outline.style.opacity = '0.5';
+						outline.style.borderColor = getComputedStyle(document.body).getPropertyValue(
+							'--accent-800'
+						);
 					});
 				});
 			});
@@ -37,11 +40,12 @@
 	});
 </script>
 
-<div class=" max-lg:hidden ">
-	<div bind:this={dot} class="cursor-dot w-[5px] h-[5px] bg-white" />
-	<div id="cursorO"
+<div class=" max-lg:hidden">
+	<div bind:this={dot} class="cursor-dot w-[7px] h-[7px] bg-accent-800 z-[999]" />
+	<div
+		id="cursorO"
 		bind:this={outline}
-		class="cursor-outline w-11 h-11 border-2 border-solid bg-blend-multiply bg-blue-700/20 border-white/10 opacity-50"
+		class="cursor-outline w-11 h-11 border-2 bg-accent-200 border-solid opacity-50 border-accent-800 z-[998]"
 	/>
 </div>
 
@@ -53,7 +57,7 @@
 		left: O;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
-		z-index: 999;
+		/* z-index: 998; */
 		pointer-events: none;
 	}
 
