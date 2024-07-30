@@ -292,6 +292,7 @@
 body {
 	font-family: 'Martian Mono';
 	font-weight: 400;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {

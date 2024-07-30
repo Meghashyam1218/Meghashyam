@@ -104,6 +104,9 @@
 		outlinehover.style.width = '44px';
 		outlinehover.style.height = '44px';
 		outlinehover.style.borderColor = 'rgb(255 255 255 / 0.1)';
+		document.body.style.overflow = 'scroll';
+		document.body.style.overflowX = 'hidden';
+		window.scrollTo(0, 0);
 	}
 	onMount(() => {
 		gsap.registerPlugin();
@@ -113,7 +116,7 @@
 </script>
 
 {#if $preloader}
-	<section id="preloader" class=" absolute top-0 z-[998] w-[100dvw] h-[100dvh]">
+	<section id="preloader" class=" fixed top-0 z-[998] w-[100dvw] h-[100dvh]">
 		<div class="flex absolute z-[-10] w-[100vw] h-[100dvh] overflow-hidden">
 			<div class="bgdiv bg-gradient-radial w-[100%]" />
 			<!-- <div class="bgdiv bg-gradient-radial w-[25%]" />
@@ -146,7 +149,7 @@
 							class="progress-fill transition-all bg-accent-500 ease-out absolute h-3 rounded-2xl"
 						/>
 					</div>
-					<small class="loading text-neutral-200 font-mono">
+					<small class="loading text-text-800 font-mono">
 						{#if load}LOADING...{:else}COMPLETED{/if}
 					</small>
 				</div>

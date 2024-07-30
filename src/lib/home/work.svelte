@@ -1,7 +1,7 @@
 <section id="work" class="work px-4">
 	<h2 class="lg:text-4xl text-text-800 md:text-3xl text-2xl">My Work</h2>
 	<div class=" grid sm:grid-cols-2 gap-10 mt-2 tracking-tighter">
-		<div class="image-container relative border-2 border-secondary-700 rounded-lg">
+		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
 			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup1.jpg" />
 			<div
 				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-end items-end opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
@@ -18,7 +18,7 @@
 				>
 			</div>
 		</div>
-		<div class="image-container relative border-2 border-secondary-700 rounded-lg">
+		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
 			<img class="rounded-lg" alt="Vasista-Kitchen" src="/work/mockup2.jpg" />
 			<div
 				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-end items-end opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
@@ -35,7 +35,7 @@
 				>
 			</div>
 		</div>
-		<div class="image-container relative border-2 border-secondary-700 rounded-lg">
+		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
 			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup3.jpg" />
 			<div
 				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-start items-start opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
@@ -51,7 +51,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="image-container relative border-2 border-secondary-700 rounded-lg">
+		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
 			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup4.jpg" />
 			<div
 				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-start items-start opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
