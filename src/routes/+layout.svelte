@@ -18,7 +18,7 @@
 
 <Navbar />
 <div
-	class=" portfolio bg-background-50 fixed top-0 w-[100dvw] h-[100dvh] z-[-998] pointer-events-none"
+	class=" portfolio bg-background-50 fixed top-0 w-[100dvw] h-[200dvh] z-[-998] pointer-events-none"
 />
 <slot />
 <CustomCursor />

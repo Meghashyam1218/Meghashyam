@@ -1,4 +1,4 @@
-<section id="work" class="work px-4">
+<section id="work" class="work px-4 scroll-m-24">
 	<h2 class="lg:text-4xl text-text-800 md:text-3xl text-2xl">My Work</h2>
 	<div class=" grid sm:grid-cols-2 gap-10 mt-2 tracking-tighter">
 		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
