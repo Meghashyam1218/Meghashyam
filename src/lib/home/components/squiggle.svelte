@@ -1,4 +1,4 @@
-<div class="squiggle relative top-[-8px] my-10">
+<div class="squiggle relative  my-10">
 	<svg aria-hidden="true" width="100%" height="8" fill="none">
 		<pattern id="a" width="91" height="8" patternUnits="userSpaceOnUse">
 			<g clip-path="url(#clip0_2426_11367)">

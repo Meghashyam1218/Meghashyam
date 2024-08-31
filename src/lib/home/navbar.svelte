@@ -9,18 +9,18 @@
 		if (body.classList.contains('dark')) {
 			body.classList.remove('dark');
 			$darkMode = false;
-			document.getElementById('checkbox').checked = false;
+			// document.getElementById('checkbox').checked = false;
 		} else {
 			body.classList.add('dark');
 			$darkMode = true;
-			document.getElementById('checkbox').checked = true;
+			// document.getElementById('checkbox').checked = true;
 		}
 	}
 	onMount(() => {
 		if ($darkMode) {
-			document.getElementById('checkbox').checked = true;
+			// document.getElementById('checkbox').checked = true;
 		} else {
-			document.getElementById('checkbox').checked = false;
+			// document.getElementById('checkbox').checked = false;
 		}
 	});
 </script>

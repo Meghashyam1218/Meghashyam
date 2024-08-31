@@ -1,93 +1,100 @@
-<section id="work" class="work px-4 scroll-m-24">
+<script>
+	let links = [
+		'https://www.vasistakitchen.com/',
+		'https://catherinecbse.info/',
+		'https://github.com/Meghashyam1218/BEAM',
+		'#'
+	];
+</script>
+
+<section id="work" class="work px-4 md:m-4 scroll-m-24">
 	<h2 class="lg:text-4xl text-text-800 md:text-3xl text-2xl">My Work</h2>
-	<div class=" grid sm:grid-cols-2 gap-10 mt-2 tracking-tighter">
-		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
-			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup1.jpg" />
+	<div
+		class="image-slides transition-[grid-template-rows,grid-template-columns] ease-in-out duration-[800ms] h-[335px] xs:h-[380px] sm:h-[550px] md:h-[600px] lg:h-[350px] xl:h-[400px] 2xl:h-[450px] mt-2 tracking-tighter grid max-lg:grid-rows-[60%_13%_13%_13%] mage-slides lg:grid-cols-[4fr_1fr_1fr_1fr]"
+	>
+		{#each links as link, i}
 			<div
-				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-end items-end opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
+				class="slide group relative hoverable border-2 m-1 border-secondary-600 rounded-[3rem]"
 			>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm font-bold">
-					|Catherine CBSE School|
-				</p>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm">|A School Website|</p>
-				<a
-					href="https://catherinecbse.info/"
-					target="_blank"
-					class="text lg:text-xl bg-primary-600 md:text-base text-sm underline underline-offset-4 hover:scale-110"
-					>Visit</a
-				>
+				<img
+					class="rounded-[3rem] object-cover transition-all h-full w-full"
+					alt="Work Img"
+					src={`/work/mockup${i + 1}.jpg`}
+				/>
+				{#if i != 3}
+					<a
+						href={link}
+						target="_blank"
+						class="text group-hover:scale-100 duration-300 group-hover:opacity-100 delay-200 scale-0 opacity-0 absolute border-background-700 border-2 bottom-4 right-4 lg:text-xl p-2 px-6 rounded-full transition-all ease-in-out bg-background-300 text-text-950 md:text-base text-sm hover:underline underline-offset-4"
+						>Visit</a
+					>
+				{:else}
+					<p
+						class="text group-hover:scale-100 duration-300 group-hover:opacity-100 delay-200 scale-0 opacity-0 absolute border-background-700 border-2 bottom-4 right-4 lg:text-xl p-2 px-6 rounded-full transition-all ease-in-out bg-background-300 text-text-950 md:text-base text-sm hover:underline underline-offset-4"
+					>
+						Locked
+					</p>
+				{/if}
 			</div>
-		</div>
-		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
-			<img class="rounded-lg" alt="Vasista-Kitchen" src="/work/mockup2.jpg" />
-			<div
-				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-end items-end opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
-			>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm font-bold">
-					|Vasista Kitchen|
-				</p>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm">|A Local Food Restaurant|</p>
-				<a
-					href="https://www.vasistakitchen.com/"
-					target="_blank"
-					class="text lg:text-xl bg-primary-600 md:text-base text-sm underline underline-offset-4 hover:scale-110"
-					>Visit</a
-				>
-			</div>
-		</div>
-		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
-			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup3.jpg" />
-			<div
-				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-start items-start opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
-			>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm font-bold">|ChecMate App|</p>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm">
-					|An app for Civil Workers|
-				</p>
-				<p
-					class="text lg:text-xl bg-primary-600 md:text-base text-sm underline underline-offset-4 hover:scale-110"
-				>
-					Private App
-				</p>
-			</div>
-		</div>
-		<div class="image-container relative hoverable border-2 border-secondary-700 rounded-lg">
-			<img class="rounded-lg" alt="Catherine-School" src="/work/mockup4.jpg" />
-			<div
-				class="overlay rounded-lg absolute w-full h-full flex flex-col gap-2 p-4 justify-start items-start opacity-5 transition-opacity duration-[0.5s] left-0 top-0"
-			>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm font-bold">|BEAM|</p>
-				<p class="text lg:text-xl bg-primary-600 md:text-base text-sm">
-					|Studnet and Tecaher's Hub|
-				</p>
-				<a
-					href="https://github.com/Meghashyam1218/BEAM"
-					target="_blank"
-					class="text lg:text-xl bg-primary-600 md:text-base text-sm underline underline-offset-4 hover:scale-110"
-					>Visit</a
-				>
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
 <style>
-	.overlay {
-		background: linear-gradient(
-			320deg,
-			rgb(from var(--secondary-500) r g b / 40%),
-			rgba(0, 0, 0, 0.3)
-		);
+	@media not all and (min-width: 1324px) {
+		.image-slides:has(
+				.slide:nth-child(1):hover,
+				.slide:nth-child(1):focus-within
+			) {
+			grid-template-rows: 60% 13% 13% 13%;
+		}
+		.image-slides:has(
+				.slide:nth-child(2):hover,
+				.slide:nth-child(2):focus-within
+			) {
+			grid-template-rows: 13% 60% 13% 13%;
+		}
+		.image-slides:has(
+				.slide:nth-child(3):hover,
+				.slide:nth-child(3):focus-within
+			) {
+			grid-template-rows: 13% 13% 60% 13%;
+		}
+		.image-slides:has(
+				.slide:nth-child(4):hover,
+				.slide:nth-child(4):focus-within
+			) {
+			grid-template-rows: 13% 13% 13% 60%;
+		}
 	}
-
-	.image-container:hover .overlay {
+	@media (min-width: 1324px) {
+		.image-slides:has(
+				.slide:nth-child(1):hover,
+				.slide:nth-child(1):focus-within
+			) {
+			grid-template-columns: 4fr 1fr 1fr 1fr;
+		}
+		.image-slides:has(
+				.slide:nth-child(2):hover,
+				.slide:nth-child(2):focus-within
+			) {
+			grid-template-columns: 1fr 4fr 1fr 1fr;
+		}
+		.image-slides:has(
+				.slide:nth-child(3):hover,
+				.slide:nth-child(3):focus-within
+			) {
+			grid-template-columns: 1fr 1fr 4fr 1fr;
+		}
+		.image-slides:has(
+				.slide:nth-child(4):hover,
+				.slide:nth-child(4):focus-within
+			) {
+			grid-template-columns: 1fr 1fr 1fr 4fr;
+		}
+	}
+	.slide:nth-child(1):not(:has(~ .slide:hover, ~ .slide:focus-within)) .text {
+		transform: scale(1);
 		opacity: 1;
-	}
-	.image-container:focus .overlay {
-		opacity: 1;
-	}
-
-	.text {
-		color: white;
 	}
 </style>

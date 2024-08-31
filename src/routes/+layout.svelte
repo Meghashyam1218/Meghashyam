@@ -53,7 +53,12 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 255, 0.5); /* Adjust color and opacity as needed */
+		background-color: rgba(
+			0,
+			0,
+			255,
+			0.5
+		); /* Adjust color and opacity as needed */
 		mix-blend-mode: overlay; /* Blend mode for color blending */
 	}
 </style>
